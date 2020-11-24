@@ -1,0 +1,11 @@
+<h3>Signup for an activity!</h3> <br>
+
+<%= render "shared/errors"%>
+
+<%= form_for @signup do |f| %>
+<%= f.label :time%>
+<%= f.number_field :time, in: 0..24%>
+<%= f.collection_select :camper_id, @campers, :id, :name %>
+<%= f.collection_select :activity_id, @activities, :id, :name%>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+<h3>Add your camper!</h3> <br>
+
+<%= render "/shared/errors" %>
+
+<%= form_for @camper do |f| %>
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+    <%= f.label :age %>
+    <%= f.text_field :age%>
+    <%= f.submit %>
+<% end %>
